@@ -7,13 +7,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin
 @RequestMapping("/users")
 @RestController
 @RequiredArgsConstructor
 public class UserController {
 
-    private final UserService userService;
+    private final UserService  userService;
 
     @PostMapping("/register")
     public ResponseEntity<Void> createUser(@RequestBody UserDTO userDTO) {
